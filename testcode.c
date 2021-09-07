@@ -5,24 +5,23 @@
   
 int i, j, height = 20, width = 20;
 int gameover, score;
-int x, y, fruitx, fruity, flag;
+int x, y, orbx, orby, flag;
   
-// Function to generate the fruit
-// within the boundary
+// Function to generate the orb.
 void setup()
 {
     gameover = 0;
   
-    // Stores height and width
+    // Stores the height and width.
     x = height / 2;
     y = width / 2;
 label1:
-    fruitx = rand() % 20;
-    if (fruitx == 0)
+    orbx = rand() % 20;
+    if (orbx == 0)
         goto label1;
 label2:
-    fruity = rand() % 20;
-    if (fruity == 0)
+    orby = rand() % 20;
+    if (orby == 0)
         goto label2;
     score = 0;
 }
@@ -41,8 +40,8 @@ void draw()
             else {
                 if (i == x && j == y)
                     printf("|");
-                else if (i == fruitx
-                         && j == fruity)
+                else if (i == orbx
+                         && j == orby)
                     printf(".");
                 else
                     printf(" ");
@@ -51,11 +50,10 @@ void draw()
         printf("\n");
     }
   
-    // Print the score after the
-    // game ends
+    // Print the score.
     printf("score = %d", score);
     printf("\n");
-    printf("press X to quit the game");
+    printf("press X to quit the game\n");
 }
   
 // Function to take the input
@@ -109,19 +107,19 @@ void logic()
         || y < 0 || y > width)
         gameover = 1;
   
-    // If snake reaches the fruit
+    // If snake reaches the orb
     // then update the score
-    if (x == fruitx && y == fruity) {
+    if (x == orbx && y == orby) {
     label3:
-        fruitx = rand() % 20;
-        if (fruitx == 0)
+        orbx = rand() % 20;
+        if (orbx == 0)
             goto label3;
   
-    // After eating the above fruit
-    // generate new fruit
+    // After eating the above orb   
+    // generate new orb
     label4:
-        fruity = rand() % 20;
-        if (fruity == 0)
+        orby = rand() % 20;
+        if (orby == 0)
             goto label4;
         score += 10;
     }
