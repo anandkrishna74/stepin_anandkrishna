@@ -115,7 +115,7 @@ void logic()
         if (orbx == 0)
             goto label3;
   
-    // After eating the above orb   
+    // After consuming the above orb   
     // generate new orb
     label4:
         orby = rand() % 20;
