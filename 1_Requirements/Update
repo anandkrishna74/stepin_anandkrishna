@@ -1,1 +1,13 @@
+INTRODUCTION:
+This is a project in c language to desing a snake game which is popular when we were kids.
 
+Objective: 
+In this project we can play the snake game which was first designed in late 1990's. The snake moves according to the keys pressed such as W -> up, A-> left, D-> right and S->down.
+An orb or food is provided in the field so that the snake can eat it and once eating the orb we get points. If the snake touches the border the game end and the total points is displayed
+in the end.
+
+STRENGTH:
+This game is fun to play and it is easy to obtain a high score.
+
+WEAKNESS:
+People might get addicted to it as it is easy and fun to play.
